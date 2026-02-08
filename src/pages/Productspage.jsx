@@ -33,41 +33,40 @@ export default function Productspage() {
   });
  
 return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      {/* Luxury background elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-400/20 via-transparent to-transparent"></div>
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-200/20 via-transparent to-transparent"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
+        <div className="text-center mb-16">
           <div className="inline-block mb-6">
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-yellow-300 mx-auto rounded-full mb-4"></div>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent mb-6 tracking-tight">
-              Luxury Collection
+            <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
+            <h1 className="text-5xl md:text-6xl font-display font-medium text-gray-900 mb-6 tracking-tight">
+              Our Collection
             </h1>
-            <div className="w-20 h-1 bg-gradient-to-r from-amber-400 to-yellow-300 mx-auto rounded-full"></div>
+            <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
           
-          <p className="text-slate-300 text-xl max-w-3xl mx-auto leading-relaxed mb-8 font-light">
+          <p className="text-gray-600 text-xl max-w-3xl mx-auto leading-relaxed mb-10 font-light">
             Discover our meticulously curated collection of premium products, crafted for the discerning connoisseur
           </p>
 
-          <div className="mb-10 space-y-6">
-            <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl p-1 max-w-lg mx-auto">
+          <div className="mb-12 space-y-8">
+            <div className="backdrop-blur-sm bg-white/80 border border-blue-100 rounded-2xl shadow-xl p-2 max-w-lg mx-auto">
               <SearchProduct setSearch={setSearch} />
             </div>
-            <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl p-8 max-w-2xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-8">
+            <div className="backdrop-blur-sm bg-white/80 border border-blue-100 rounded-2xl shadow-xl p-10 max-w-3xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-10">
                 <div className="space-y-4">
-                  <h3 className="text-amber-400 font-semibold text-lg mb-4">Price Range</h3>
+                  <h3 className="text-gray-900 font-medium text-lg mb-6 tracking-wide">Price Range</h3>
                   <ProductRange 
                     setMaxValue={setMaxValue}
                     setMinValue={setMinValue}
                   />
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-amber-400 font-semibold text-lg mb-4">Rating Filter</h3>
+                  <h3 className="text-gray-900 font-medium text-lg mb-6 tracking-wide">Rating Filter</h3>
                   <FilterByRating 
                     setMinRate={setMinRating}
                     setMaxRating={setMaxRating}
@@ -77,7 +76,7 @@ return (
             </div>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             <CategoryTab CategoryName="all" key="all" setSelectedCategory={setSelectedCategory} selectedCategory={selectedCategory}/>
             {
               categoriesData.map((category) => {
@@ -86,8 +85,8 @@ return (
             }
           </div>
           
-          <div className="flex justify-center mb-8">
-            <div className="w-32 h-1 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 rounded-full shadow-lg"></div>
+          <div className="flex justify-center mb-10">
+            <div className="w-32 h-1 bg-blue-600 rounded-full shadow-sm"></div>
           </div>
         </div>
 

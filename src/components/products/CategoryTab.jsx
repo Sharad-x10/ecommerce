@@ -12,18 +12,16 @@ function CategoryTab({CategoryName, setSelectedCategory, selectedCategory}) {
       onClick={handleClick} 
       className={`group relative inline-block px-8 py-3 mx-2 my-2 rounded-full font-medium transition-all duration-300 capitalize tracking-wide transform hover:scale-105 ${
         isActive 
-          ? 'bg-gradient-to-r from-luxury-champagne-dark to-luxury-champagne text-luxury-charcoal shadow-gold border-2 border-luxury-champagne-dark' 
-          : 'bg-white/10 dark:bg-luxury-charcoal/50 backdrop-blur-sm border-2 border-luxury-champagne/30 dark:border-luxury-champagne/20 text-luxury-ivory dark:text-luxury-champagne hover:border-luxury-champagne hover:bg-luxury-champagne/10 hover:text-luxury-champagne shadow-lg'
+          ? 'bg-blue-600 text-white shadow-lg border-2 border-blue-600' 
+          : 'bg-white border-2 border-blue-200 text-gray-700 hover:border-blue-500 hover:bg-blue-50 hover:text-blue-600 shadow-md'
       }`}
     >
       {CategoryName}
       
-      {/* Luxury shimmer effect on hover */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-luxury-champagne/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+      <div className="absolute inset-0 rounded-full bg-blue-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       
-      {/* Active indicator */}
       {isActive && (
-        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-luxury-emerald rounded-full shadow-emerald"></div>
+        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-blue-400 rounded-full shadow-md"></div>
       )}
     </button>
   )
